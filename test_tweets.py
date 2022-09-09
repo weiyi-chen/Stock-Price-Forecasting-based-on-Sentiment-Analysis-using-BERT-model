@@ -11,7 +11,7 @@ model = AutoModel.from_pretrained("bert-base-uncased")
 
 classifier = Classifier3().to(device)
 g = TestDataGenerator()
-model_file_name = '39_classifier3_relu.pth'
+model_file_name = '1399_classifier3_relu.pth'
 classifier.load_state_dict(torch.load("./models/" + model_file_name))
 
 xx_list = []

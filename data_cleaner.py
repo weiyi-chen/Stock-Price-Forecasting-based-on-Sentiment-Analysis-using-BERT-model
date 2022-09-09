@@ -8,7 +8,8 @@ class TestDataGenerator(data.Dataset):
         self.total_data_list = []
         unique_dict = dict()
         date_dict = dict()
-        file_list = ["./nvda1.csv"]
+        file_list = ["./aapl8.csv","./aapl8.csv","./csv/aapl12.csv","./csv/aapl3.csv","./csv/aapl9.csv","./csv/aapl8.csv"]
+        # file_list = ["./tesla3.csv","./csv/tesla2.csv","./csv/tesla21.csv","./csv/tesla22.csv","./csv/tesla23.csv","./csv/tsla12.csv"]
         # with open('aapl4.csv', newline='') as csvfile:
         for filename in file_list:
             with open(filename, newline='') as csvfile:
