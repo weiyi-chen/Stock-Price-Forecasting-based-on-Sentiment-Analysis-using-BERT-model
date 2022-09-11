@@ -6,7 +6,10 @@ import matplotlib.pyplot as plt
 from matplotlib.dates import DateFormatter
 import matplotlib.dates as mdates
 import pandas as pd
-
+from sklearn.model_selection import train_test_split
+from sklearn import svm
+from sklearn.model_selection import cross_val_score
+from sklearn.metrics import classification_report, confusion_matrix
 def normalization(data):
     _range = np.max(data) - np.min(data)
     return (data - np.min(data)) / _range
@@ -23,10 +26,10 @@ date_dict = dict()
 stock_dict = dict()
 analy_tsla = False
 if analy_tsla:
-    stock_file = "./csv/TSLA_stock_2017.csv"
+    stock_file = "./csv/TSLA_stock.csv"
     score_file = "final_tsla2.csv"
 else:
-    stock_file = "./csv/AAPL_stock_2017.csv"
+    stock_file = "./csv/AAPL_stock.csv"
     score_file = "final_aapl.csv"
 
 with open(stock_file,newline = '') as file:
@@ -36,7 +39,7 @@ with open(stock_file,newline = '') as file:
         dat = datetime.datetime.strftime(dat ,'%Y%m%d')
         date_dict[dat] = 1
         stock_dict[dat] = float(row['Close'])
-        # stock_dict[dat] = float(row['Close'])-float(row["Open"])
+        #stock_dict[dat] = float(row['Close'])-float(row["Open"])
 
 
 score_dict = dict()
@@ -72,8 +75,8 @@ Normalize the data
 start = 0
 length = 240
 shift = 0
-# filtered_score_diff_arr = np.diff(np.array(filtered_score_list)) 
-# filtered_score_diff_arr = normalization(filtered_score_diff_arr)
+filtered_score_diff_arr = np.diff(np.array(filtered_score_list)) 
+filtered_score_diff_arr = normalization(filtered_score_diff_arr)
 filtered_score_list = np.array(filtered_score_list[start-shift:start+length-shift])
 # filtered_score_list = np.array(filtered_score_list[start:])
 filtered_score_list = normalization(filtered_score_list)
@@ -100,3 +103,4 @@ if analy_tsla:
 else:
     plt.title('AAPL')
 plt.show()
+
