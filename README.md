@@ -4,11 +4,11 @@ This repo contains the following modules:
 
 ## data_generator.py
 
-This file generates training data by reading the labeled Apple-Twitter-Sentiment.csv file.
+Reading the labeled Apple-Twitter-Sentiment.csv file, cleaning the data set.
 
 ## train3.py and train4.py
 
-Training a classifier based on the output of Bert feature vector, the 4-th implementation is faster.
+Tokenizing the input and training a classifier based on the output of Bert feature vector, the model is built on an open source machine learning framework -- pytorch. The 4-th implementation is faster.
 
 ## data_cleaner.py
 
