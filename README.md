@@ -4,7 +4,7 @@ This repo contains the following modules:
 
 ## data_generator.py
 
-Reading the labeled Apple-Twitter-Sentiment.csv file, cleaning the data set.
+Reading the labeled Apple-Twitter-Sentiment.csv file, converting labels with 0 and 1.
 
 ## train3.py and train4.py
 
@@ -34,6 +34,6 @@ Calculate the correlation between stock and sentiment score, then visualize it.
 
 Draw the tweets histogram by date.
 
-## svm.py
+## nn.py
 
-The svm implementation.
+Using the nn model to predict the stock trend.
