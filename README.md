@@ -1,4 +1,4 @@
-# Stock-Price-Forecasting-based-on-Sentiment-Analysis-using-Transformer
+# Stock-Price-Forecasting-based-on-Sentiment-Analysis-using-BERT-model
 
 This repo contains the following modules:
 
@@ -37,3 +37,4 @@ Draw the tweets histogram by date.
 ## nn.py
 
 Using the nn model to predict the stock trend.
+
