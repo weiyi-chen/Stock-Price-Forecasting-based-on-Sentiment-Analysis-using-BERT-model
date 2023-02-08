@@ -1,4 +1,4 @@
-# Stock-Price-Forecasting-based-on-Sentiment-Analysis-using-Transforme
+# Stock-Price-Forecasting-based-on-Sentiment-Analysis-using-Transformer
 
 This repo contains the following modules:
 
